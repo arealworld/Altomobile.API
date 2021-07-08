@@ -1,0 +1,29 @@
+CREATE TABLE tblAM_CarsTypes(
+	idCarType INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	carType VARCHAR(100)
+)
+GO
+
+CREATE TABLE tblAM_CarsBrands(
+	idCarBrand INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	carBrand VARCHAR(100)
+)
+
+CREATE TABLE tblAM_Cars(
+	idCar INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	model VARCHAR(100),
+	idCarType INT FOREIGN KEY REFERENCES tblAM_CarsTypes(idCarType),
+	idCarBrand INT FOREIGN KEY REFERENCES tblAM_CarsBrands(idCarBrand)
+)
+GO
+
+CREATE TABLE tblUsers(
+	idUser INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	[guid] VARCHAR(50),
+	firstName VARCHAR(50),
+	lastName VARCHAR(50),
+	usr VARCHAR(100),
+	pwd VARCHAR(50),
+	active BIT
+)
+GO

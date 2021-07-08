@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altomobile.API.UI", "Altomobile.API.UI\Altomobile.API.UI.csproj", "{7FC17913-3DEA-474F-A81F-CB40BCD4DA93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altomobile.API.Domain", "Altomobile.API.Domain\Altomobile.API.Domain.csproj", "{5103ADDB-F045-430C-BF4E-7DCE784FFF94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altomobile.API.DataAccess", "Altomobile.API.DataAccess\Altomobile.API.DataAccess.csproj", "{5064C566-5469-4D91-8B7B-C574021D405B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altomobile.API.BusinessLogic", "Altomobile.API.BusinessLogic\Altomobile.API.BusinessLogic.csproj", "{2EA9476D-2CA4-4FBA-9A3B-E31BB2719524}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FC17913-3DEA-474F-A81F-CB40BCD4DA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC17913-3DEA-474F-A81F-CB40BCD4DA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC17913-3DEA-474F-A81F-CB40BCD4DA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC17913-3DEA-474F-A81F-CB40BCD4DA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5103ADDB-F045-430C-BF4E-7DCE784FFF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5103ADDB-F045-430C-BF4E-7DCE784FFF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5103ADDB-F045-430C-BF4E-7DCE784FFF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5103ADDB-F045-430C-BF4E-7DCE784FFF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5064C566-5469-4D91-8B7B-C574021D405B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5064C566-5469-4D91-8B7B-C574021D405B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5064C566-5469-4D91-8B7B-C574021D405B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5064C566-5469-4D91-8B7B-C574021D405B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA9476D-2CA4-4FBA-9A3B-E31BB2719524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA9476D-2CA4-4FBA-9A3B-E31BB2719524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA9476D-2CA4-4FBA-9A3B-E31BB2719524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA9476D-2CA4-4FBA-9A3B-E31BB2719524}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85735599-13C6-4206-B542-32F0100FBFB6}
+	EndGlobalSection
+EndGlobal
