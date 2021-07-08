@@ -44,16 +44,23 @@ The goal is to create a RESTful API to handle a simple car rental flow, where th
 The application was built with .NET Core version 3.1, it contains four main projects:
 
 - **Altomobile.API.Domain**, contains only classes related to business entities.
+
 ![](https://drive.google.com/uc?export=view&id=1mRydT9BaMeFVXJc1FQ70YI1NQbyIgR1a)
+
 - **Altomobile.API.DataAccess**, contains the methods that connect to the database. It uses the **Autofac** library to implement the **inversion of control design pattern** (it is contained into Container folder). **Dapper** library is used as **ORM**. This layer contains the scripts for all objects which were created on the database.
+
 ![](https://drive.google.com/uc?export=view&id=1IQfLc2_Ppn8tj2s8Qt7y2ht5uVFiEza6)
 
-    The **ICommon** interface uses **generics** to reuse data access methods:
-    ![](https://drive.google.com/uc?export=view&id=1Dgb5MqCNn0fKIKI2vRjKL6a_w2wLUFMf)    
+The **ICommon** interface uses **generics** to reuse data access methods:
+
+![](https://drive.google.com/uc?export=view&id=1Dgb5MqCNn0fKIKI2vRjKL6a_w2wLUFMf)
+
 - **Altomobile.API.BusinessLogic**, contains the implementation for each business entity to call the data access layer and return values to the presentation layer. Using **Autofac** ensures very easy scalability to the application.
 
 ![](https://drive.google.com/uc?export=view&id=1NYcRZ9ZfeBqqHmUn1z_nmYI22mdyjYXN)
+
 - **Altomobile.API.UI**, is the **presentation layer** of the services. **This implements security to expose the services**, the user must first obtain a **session token (JWT)** and send it later in the request header to consume the protected services. This implements **Swagger** to self-document the service layer and integrate a rest client to facilitate testing.
+
 ![](https://drive.google.com/uc?export=view&id=1wUrb3b25p7Jf4KQeEMUeu0tC8sjQH51Z)
 
 ### How to use
@@ -68,11 +75,15 @@ You just need to **clone the project, open the solution and press run**, then th
 
 ![](https://drive.google.com/uc?export=view&id=1bFohfVF9MUADypBXGzUdb-5PJgmLsgCl)
 ![](https://drive.google.com/uc?export=view&id=1OZnfHKEuTD8_Lkvg3QbtN-xTUj7eiiS5)
+
 The service must respond to the session token, which is the entire long chain that must be sent in each request. **This value must be copied for later use**.
+
 ![](https://drive.google.com/uc?export=view&id=1cUI85SEVJgOjnal7qPnKZwWj7EN4-bsD)
 
 **2. Authentication**. To authenticate globally in the Swagger client we must do the following:
+
 ![](https://drive.google.com/uc?export=view&id=1AS1aRxyfjS8M0UL0PHGuR19NEm8m6ZmC)
+
 In the value of the field you must write the word **bearer** + **session token**:
 
 ![](https://drive.google.com/uc?export=view&id=1pwTW3q4huCLQLFlFxyFIwO5GWNAUTLlA)
