@@ -7,13 +7,16 @@
 The goal is to create a RESTful API to handle a simple car rental flow, where the endpoints are secured with an authorization method and includes a reporting system.
 
 - **1.** The API has to be protected with a security mechanism. It needs to return the appropriate error code for “not authorized”.
+
 ![](https://drive.google.com/uc?export=view&id=1jlFK0So6adlV6cEvmvCiAPz8FfxYgSRY)
 ![](https://drive.google.com/uc?export=view&id=1aQlCZmNn5BBWOHAtWnLQLOu0Ts09unWK)
 - **2.** In case of incorrect parameters or request body, it has to return the right code for “bad request”.
+
 ![](https://drive.google.com/uc?export=view&id=1FORw1YavjkKgslA7L9lnWgqWjEvv5x-V)
 - **3. Login endpoint**: it authenticates an account and returns the needed information to access the other endpoints.
   - a. Body: user: string / password: string
   - b. Response: needed info to authorization the others endpoints
+
 ![](https://drive.google.com/uc?export=view&id=17zXvBQNJt058G6YrP-JNZQjf7tm46enu)
 - **4. Search cars endpoint**: we want to know the availability of cars, searched by type, brand or model. For the “type” parameter, there are only 3 valid values.
   - a. Body:
@@ -21,12 +24,14 @@ The goal is to create a RESTful API to handle a simple car rental flow, where th
     - ii. brand: string
     - iii. model: string
   - b. Response: List of cars
+
 ![](https://drive.google.com/uc?export=view&id=15ucocTMrUi4W4E9CgDPgbOYxJzNZDfdf)
 - **5. Reporting endpoint**: implement an algorithm that returns a report of the cars rented until now receiving 1 to 2 parameters for grouping.
   - a. Examples:
     - i. With the parameter “type”: { small: 5, medium: 6, big: 2 }
     - ii. With the parameter “type” and “brand”: { small: { nissan: 3, chevrolet: 2 }, medium: { mercedes: 5, toyota: 1 }, big: { tesla: 2 } }
     - iii. With the parameter “brand” and “type”: { nissan: { small: 1, medium: 2 } }
+
 ![](https://drive.google.com/uc?export=view&id=18C2f5LN925zahnIWcjHeKV7etE57AUNW)
 - **6.** The data can be dummy info and it is possible to use a real DB (the DB creation script should be provided) or an in-memory database.
 - **7.** Provide valid user/pass for testing.
@@ -46,6 +51,7 @@ The application was built with .NET Core version 3.1, it contains four main proj
     The **ICommon** interface uses **generics** to reuse data access methods:
     ![](https://drive.google.com/uc?export=view&id=1Dgb5MqCNn0fKIKI2vRjKL6a_w2wLUFMf)    
 - **Altomobile.API.BusinessLogic**, contains the implementation for each business entity to call the data access layer and return values to the presentation layer. Using **Autofac** ensures very easy scalability to the application.
+
 ![](https://drive.google.com/uc?export=view&id=1NYcRZ9ZfeBqqHmUn1z_nmYI22mdyjYXN)
 - **Altomobile.API.UI**, is the **presentation layer** of the services. **This implements security to expose the services**, the user must first obtain a **session token (JWT)** and send it later in the request header to consume the protected services. This implements **Swagger** to self-document the service layer and integrate a rest client to facilitate testing.
 ![](https://drive.google.com/uc?export=view&id=1wUrb3b25p7Jf4KQeEMUeu0tC8sjQH51Z)
